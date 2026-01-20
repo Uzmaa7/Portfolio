@@ -1,5 +1,7 @@
 import Logo from "./Logo";
 import Link from "next/link";
+import LinkButton from "../LinkButton";
+import { LuDownload } from "react-icons/lu";
 
 const navLinks = [
     {url: "#home", label:"Home"},
@@ -14,8 +16,10 @@ function Navbar(){
     return(
         <nav className="h-18 ">
             <div className="h-full w-[90%] flex items-center justify-between mx-auto">
+            {/* logo */}
                 <Logo/>
 
+            {/* nav-links */}
                 <ul className="hidden lg:flex space-x-10">
                     {navLinks.map((link) => {
                         return(
@@ -26,6 +30,11 @@ function Navbar(){
                         )
                     })}
                 </ul>
+
+            {/* button */}
+                <LinkButton href="/documents/cv.pdf" text="Download CV" download 
+                    icon={LuDownload} iconPosition="left" 
+                />
             </div>
         </nav>
     )
