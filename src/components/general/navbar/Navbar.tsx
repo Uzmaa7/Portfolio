@@ -32,9 +32,10 @@ function Navbar(){
                 </ul>
 
             {/* button */}
-                <LinkButton href="/documents/cv.pdf" text="Download CV" download 
-                    icon={LuDownload} iconPosition="left" 
-                />
+                <div className="hidden lg:block">
+                    <LinkButton href="/documents/cv.pdf" text="Download CV" download 
+                    icon={LuDownload} iconPosition="left" />
+                </div>
             </div>
         </nav>
     )
