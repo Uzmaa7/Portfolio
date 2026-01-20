@@ -1,7 +1,10 @@
+"use client"
 import Logo from "./Logo";
 import Link from "next/link";
 import LinkButton from "../LinkButton";
 import { LuDownload } from "react-icons/lu";
+import MobileNav from "./MobileNav";
+import { useState } from "react";
 
 const navLinks = [
     {url: "#home", label:"Home"},
@@ -13,6 +16,8 @@ const navLinks = [
     {url: "#contact", label:"Contact"},
 ]
 function Navbar(){
+    const [navOpen, setNavOpen] = useState(false);
+
     return(
         <nav className="h-18 ">
             <div className="h-full w-[90%] flex items-center justify-between mx-auto">
@@ -36,6 +41,10 @@ function Navbar(){
                     <LinkButton href="/documents/cv.pdf" text="Download CV" download 
                     icon={LuDownload} iconPosition="left" />
                 </div>
+
+            {/* MobileNav */}
+
+                <MobileNav navOpen={navOpen}/>
             </div>
         </nav>
     )
