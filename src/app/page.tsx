@@ -1,7 +1,9 @@
-
+import HeroSection from "@/components/home/hero/HeroSection";
 
 export default function Home() {
   return (
-    <h1 className="h-[2000]">Hello everyone</h1>
+   <>
+   <HeroSection/>
+   </>
   );
 }
