@@ -4,7 +4,7 @@ import Link from "next/link";
 import LinkButton from "../LinkButton";
 import { LuDownload, LuMenu, LuX } from "react-icons/lu";
 import MobileNav from "./MobileNav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
  export const navLinks = [
     {url: "#home", label:"Home"},
@@ -17,9 +17,35 @@ import { useState } from "react";
 ]
 function Navbar(){
     const [navOpen, setNavOpen] = useState(false);
+    const [navBackground , setNavBackground] = useState(false);
+
+    useEffect(() => {
+        const navHandler = () => {
+            if(window.scrollY >= 90){
+                setNavBackground(true);
+            }
+            else{
+                // (window.scrollX < 90)
+                setNavBackground(false);
+            }
+        }
+        
+        window.addEventListener("scroll", navHandler);
+
+        return () => {
+            return window.removeEventListener("scroll", navHandler);
+        }
+    },[])
+
+
+
+
 
     return(
-        <nav className="h-18 ">
+        <nav className={`h-18  fixed z-50 w-full transition-all duration-300 
+            ${navBackground ? "bg-slate-900 shadow-md" : ""}`}>
+
+
             <div className="h-full w-[90%] flex items-center justify-between mx-auto">
             {/* logo */}
                 <Logo/>
