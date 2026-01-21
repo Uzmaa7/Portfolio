@@ -6,7 +6,7 @@ import { LuDownload } from "react-icons/lu";
 import MobileNav from "./MobileNav";
 import { useState } from "react";
 
-const navLinks = [
+ export const navLinks = [
     {url: "#home", label:"Home"},
     {url: "#services", label:"Services"},
     {url: "#resume", label:"Resume"},
@@ -43,8 +43,9 @@ function Navbar(){
                 </div>
 
             {/* MobileNav */}
-
                 <MobileNav navOpen={navOpen}/>
+
+            
             </div>
         </nav>
     )
