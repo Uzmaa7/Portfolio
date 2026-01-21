@@ -6,18 +6,19 @@ interface MobileNavProps{
 }
 
 export default function MobileNav({navOpen} : MobileNavProps){
+    const showMobileNav = navOpen ? "translate-x-0" : "translate-x-[100%]"
     return(
         <>
         {/* insetbackground */}
         <div className={`fixed inset-0 transform right-0 
             z-50 bg-black opacity-30 w-full h-screen transition-all
-             duration-500`}></div>
+             duration-500 ${showMobileNav}`}></div>
 
         {/* navlinks */}
         <ul className={`fixed flex items-center justify-center text-white flex-col
             h-full transform transition-all duration-500 delay-300
             w-[80%] sm:w-[60%] bg-slate-800 space-y-1 z-80 right-0 
-            top-0`}>
+            top-0 ${showMobileNav}`}>
 
             {navLinks.map((link) => {
                 return(

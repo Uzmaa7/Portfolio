@@ -2,7 +2,7 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import LinkButton from "../LinkButton";
-import { LuDownload } from "react-icons/lu";
+import { LuDownload, LuMenu, LuX } from "react-icons/lu";
 import MobileNav from "./MobileNav";
 import { useState } from "react";
 
@@ -41,6 +41,12 @@ function Navbar(){
                     <LinkButton href="/documents/cv.pdf" text="Download CV" download 
                     icon={LuDownload} iconPosition="left" />
                 </div>
+
+            <button
+            onClick={() => setNavOpen(!navOpen)}
+            className="w-8 h-8 text-white z-100 cursor-pointer lg:hidden">
+            {navOpen ? <LuX size={30}/> : <LuMenu size={30}/>}
+            </button>
 
             {/* MobileNav */}
                 <MobileNav navOpen={navOpen}/>
