@@ -90,7 +90,7 @@ export default function SkillSection(){
                     return(
                         <div key={index} className="bg-slate-900 text-center w-30
                         h-40 rounded-3xl flex flex-col items-center justify-center shadow-lg
-                        transition:hover:scale-110">
+                        transition-transform duration-300 hover:scale-110">
 
                             <div className="text-5xl text-gray-300  my-4">
                                 {skill.icon}
