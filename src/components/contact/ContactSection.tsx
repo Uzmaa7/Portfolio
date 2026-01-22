@@ -1,12 +1,13 @@
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa"
 import Link from "next/link";
+import { LuSend } from "react-icons/lu";
 
 const contactInfo = [
     {
         icon:<FaEnvelope className="w-6 h-6"/>,
         title: "Email",
         value: "uz9971khan@gmail.com",
-        link: "uz9971khan@gmail.com"
+        link: "mailto:uz9971khan@gmail.com"
     },
     {
         icon:<FaPhone className="w-6 h-6"/>,
@@ -23,10 +24,11 @@ const contactInfo = [
 ];
 
 export default function ContactSection() {
+    const InputStyles = "px-4 py-3.5 my-4 bg-slate-800 outline-none rounded-md w-full text-gray-200 placeholder-gray-400"
     return (
 
-        <section id="contact" className="py-16 lg:py-30">
-            <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1
+        <section id="contact" className="py-16 lg:py-20">
+            <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1
             lg:grid-cols-2 gap-6 lg:gap-12">
 
                 <div>
@@ -64,6 +66,26 @@ export default function ContactSection() {
 
                     </div>
 
+                </div>
+
+                {/* form */}
+
+                <div>
+                    <form className="rounded-lg bg-slate-900 px-4 py-8">
+                        <input type="text" placeholder="Your Name" className={InputStyles} required/>
+
+                        <input type="text" placeholder="Your Email"  className={InputStyles}  required/>
+
+                        <input type="text" placeholder="Subject of Message"  className={InputStyles}  required/>
+
+                        <textarea placeholder="Message" required  className={`${InputStyles} resize-none `} rows={5} />
+
+                        <button 
+                        className="w-full bg-linear-to-r from-blue-900 to-purple-800 hover:from-blue-800 hover:to-purple-700 text-white font-semibold py-4 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70">   
+                        <LuSend size={20} />
+                        Send Message
+                        </button>
+                    </form>
                 </div>
 
             </div>
