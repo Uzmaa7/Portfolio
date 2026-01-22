@@ -12,7 +12,7 @@ export default function Header({title, as:Tag = "h1"}:HeaderProps){
     }
     return(
 
-        <div className="py-14  md:py-20 flex flex-col">
+        <div className="py-14  md:py-20 flex justify-center">
             <Tag className= {` text-center font-bold tracking-wide text-transparent 
             bg-clip-text bg-linear-to-r from-indigo-500  to-gray-300 ${sizeClasses[Tag]}`}>
                 {title}
