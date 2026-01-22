@@ -33,7 +33,7 @@ function Navbar(){
         window.addEventListener("scroll", navHandler);
 
         return () => {
-            return window.removeEventListener("scroll", navHandler);
+            window.removeEventListener("scroll", navHandler);
         }
     },[])
 
