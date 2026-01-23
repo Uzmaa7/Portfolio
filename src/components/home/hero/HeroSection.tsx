@@ -30,7 +30,7 @@ export default function HeroSection(){
             
             <div className="absolute z-10 flex flex-col items-center">
                 {/* glowing img */}
-                <div className="w-37.5 h-37.5 relative">
+                <div className="w-37.5 h-37.5 relative" data-aos = "fade-up">
 
                     <div className="absolute inset-0 rounded-full bg-linear-to-r
                     from-blue-500 to-purple-600 blur-lg animate-pulse
@@ -41,7 +41,7 @@ export default function HeroSection(){
                 </div>
 
                 {/* Text */}
-                <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold my-6
+                <h1 data-aos = "fade-up" data-aos-delay = "200" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold my-6
                 tracking-wide text-transparent bg-clip-text bg-linear-to-r
                 from-indigo-500 to-gray-300">Hi, I&apos;m a Web Developer</h1>
 
@@ -49,7 +49,7 @@ export default function HeroSection(){
                 <AnimatedIntro/>
 
                 {/* Button */}
-                <LinkButton href="#projects" text="See my work" icon={LuArrowRight} rounded download={false} />
+                <LinkButton href="#projects" text="See my work" icon={LuArrowRight} rounded download={false} aosType="fade-up" aosDelay={600} animate/>
             </div>
 
         </section>

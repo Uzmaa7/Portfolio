@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect"
 
 export default function AnimatedIntro(){
     return(
-        <div className="text-lg sm:text-2xl h-30 px-8 text-center font-medium text-gray-400">
+        <div data-aos = "fade-up" data-aos-delay = "400" className="text-lg sm:text-2xl h-30 px-8 text-center font-medium text-gray-400">
             Hi, I&apos;m Uzma - A passionate
             <span className="font-bold text-indigo-400">
            <Typewriter options={{

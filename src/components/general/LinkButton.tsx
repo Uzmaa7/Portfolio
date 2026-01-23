@@ -9,12 +9,25 @@ interface LinkButtonProps {
     download: boolean,
     icon?: IconType,
     iconPosition?: "right" | "left"
+
+    //aos Animation
+    animate?:boolean,
+    aosType:string,
+    aosDelay:number
 }
 
-function LinkButton({href, text, rounded, download=false, icon:Icon,iconPosition="right"} : LinkButtonProps){
+function LinkButton({href, text, rounded, download=false, icon:Icon,iconPosition="right", animate=false,
+    aosType = "fade-up", aosDelay = 0
+} : LinkButtonProps){
     return(
 
-        <Link href={href} download={download}
+        <Link 
+        {...(animate && {
+            "data-aos":aosType,
+            "data-aos-delay":aosDelay,
+        })}
+
+        href={href} download={download}
             className=
             { 
                 `px-8 py-3 bg-linear-to-r from-blue-900 to-purple-800

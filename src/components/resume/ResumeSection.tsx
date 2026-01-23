@@ -10,7 +10,7 @@ export default function ResumeSection(){
             <div className="w-[90%] sm:w-[70%] mx-auto gap-10">
 
                 {/* education Section */}
-                <div>
+                <div data-aos = "zoom-out">
                     <Header title="My Education" as="h2"/>
                     <div className="space-y-6">
                         <ResumeCard icon= {LuGraduationCap} role="Computer Science Degree"

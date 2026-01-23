@@ -88,7 +88,9 @@ export default function SkillSection(){
             <div className="flex flex-wrap justify-center gap-6">
                 {skills.map((skill, index) => {
                     return(
-                        <div key={index} className="bg-slate-900 text-center w-30
+                        <div 
+                        data-aos = "flip-right" data-aos-delay = {index*100} 
+                        key={index} className="bg-slate-900 text-center w-30
                         h-40 rounded-3xl flex flex-col items-center justify-center shadow-lg
                         transition-transform duration-300 hover:scale-110">
 
