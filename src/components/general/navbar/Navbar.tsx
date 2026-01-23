@@ -55,7 +55,10 @@ function Navbar(){
                     {navLinks.map((link) => {
                         return(
                             <li key={link.url}>
-                                <Link className="text-gray-200 hover:text-cyan-300
+
+                                <Link
+                                
+                                className="text-gray-200 hover:text-cyan-300
                                 font-medium transition-colors duration-300" href={link.url}>{link.label}</Link>
                             </li>
                         )
@@ -75,7 +78,7 @@ function Navbar(){
             </button>
 
             {/* MobileNav */}
-                <MobileNav navOpen={navOpen}/>
+                <MobileNav navOpen={navOpen}  setNavOpen = {setNavOpen}/>
 
             
             </div>

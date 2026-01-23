@@ -12,8 +12,8 @@ interface LinkButtonProps {
 
     //aos Animation
     animate?:boolean,
-    aosType:string,
-    aosDelay:number
+    aosType?:string,
+    aosDelay?:number
 }
 
 function LinkButton({href, text, rounded, download=false, icon:Icon,iconPosition="right", animate=false,
